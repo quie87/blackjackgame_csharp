@@ -1,0 +1,11 @@
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\bin\Debug\netcoreapp3.0\blackjackgame_csharp.exe
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\bin\Debug\netcoreapp3.0\blackjackgame_csharp.deps.json
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\bin\Debug\netcoreapp3.0\blackjackgame_csharp.runtimeconfig.json
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\bin\Debug\netcoreapp3.0\blackjackgame_csharp.runtimeconfig.dev.json
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\bin\Debug\netcoreapp3.0\blackjackgame_csharp.dll
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\bin\Debug\netcoreapp3.0\blackjackgame_csharp.pdb
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\obj\Debug\netcoreapp3.0\blackjackgame_csharp.csprojAssemblyReference.cache
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\obj\Debug\netcoreapp3.0\blackjackgame_csharp.AssemblyInfoInputs.cache
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\obj\Debug\netcoreapp3.0\blackjackgame_csharp.AssemblyInfo.cs
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\obj\Debug\netcoreapp3.0\blackjackgame_csharp.dll
+C:\Users\krist\Desktop\Skolan\1dv607\Workshop 3\blackjackgame_csharp\obj\Debug\netcoreapp3.0\blackjackgame_csharp.pdb
