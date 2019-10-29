@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.controller
 {
@@ -17,7 +18,7 @@ namespace BlackJack.controller
         public bool Play()
         {
             a_view.DisplayWelcomeMessage();
-            
+
             a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
             a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
 
@@ -26,22 +27,22 @@ namespace BlackJack.controller
                 a_view.DisplayGameOver(a_game.IsDealerWinner());
             }
 
-            int input = a_view.GetInput();
+            view.MenuOptions input = a_view.GetInput();
 
-            if (input == 'p')
+            if (input == view.MenuOptions.Play)
             {
                 a_game.NewGame();
             }
-            else if (input == 'h')
+            else if (input == view.MenuOptions.Hit)
             {
                 a_game.Hit();
             }
-            else if (input == 's')
+            else if (input == view.MenuOptions.Stand)
             {
                 a_game.Stand();
             }
 
-            return input != 'q';
+            return input != view.MenuOptions.Quit;
         }
     }
 }
