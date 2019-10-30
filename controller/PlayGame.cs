@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace BlackJack.controller
 {
-    class PlayGame : model.ICardDealtListerner
+    class PlayGame : model.ICardsDealtObserver
     {
         private view.IView a_view;
         private model.Game a_game;
@@ -18,7 +18,7 @@ namespace BlackJack.controller
         }
         public bool Play()
         {
-            ShowCard();
+            UpdateCards();
             
             if (a_game.IsGameOver())
             {
@@ -43,7 +43,7 @@ namespace BlackJack.controller
             return input != view.MenuOptions.Quit;
         }
 
-        public void ShowCard()
+        public void UpdateCards()
         {
             Thread.Sleep(1000);
             a_view.DisplayWelcomeMessage();

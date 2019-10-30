@@ -16,7 +16,7 @@ namespace BlackJack.model
             m_player = new Player();
         }
 
-        public void AddSubscribers(ICardDealtListerner a_sub)
+        public void AddSubscribers(ICardsDealtObserver a_sub)
         {
             m_dealer.AddSubscriber(a_sub);
         }
