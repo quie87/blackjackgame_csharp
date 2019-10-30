@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame : model.ICardDealtListerner
     {
         private view.IView a_view;
         private model.Game a_game;
@@ -14,14 +14,12 @@ namespace BlackJack.controller
         {
             this.a_view = a_view;
             this.a_game = a_game;
+            a_game.AddSubscribers(this);
         }
         public bool Play()
         {
-            a_view.DisplayWelcomeMessage();
-
-            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
-
+            ShowCard();
+            
             if (a_game.IsGameOver())
             {
                 a_view.DisplayGameOver(a_game.IsDealerWinner());
@@ -43,6 +41,15 @@ namespace BlackJack.controller
             }
 
             return input != view.MenuOptions.Quit;
+        }
+
+        public void ShowCard()
+        {
+            Thread.Sleep(1000);
+            a_view.DisplayWelcomeMessage();
+
+            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
+            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
         }
     }
 }
