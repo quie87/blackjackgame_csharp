@@ -63,7 +63,6 @@ namespace BlackJack.model
             Card c = m_deck.GetCard();
             c.Show(true);
             a_player.DealCard(c);
-            Update();
         }
 
         public bool IsDealerWinner(Player a_player)

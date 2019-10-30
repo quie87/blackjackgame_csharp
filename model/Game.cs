@@ -18,6 +18,7 @@ namespace BlackJack.model
 
         public void AddSubscribers(ICardsDealtObserver a_sub)
         {
+            m_player.AddSubscriber(a_sub);
             m_dealer.AddSubscriber(a_sub);
         }
 
