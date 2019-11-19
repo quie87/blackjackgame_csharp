@@ -29,7 +29,7 @@ namespace BlackJack.model
                 m_deck = new Deck();
                 ClearHand();
                 a_player.ClearHand();
-                return m_newGameRule.NewGame(m_deck, this, a_player);   
+                return m_newGameRule.NewGame(this, a_player);   
             }
             return false;
         }
@@ -38,7 +38,7 @@ namespace BlackJack.model
         {
             if (m_deck != null && a_player.CalcScore() < g_maxScore && !IsGameOver())
             {
-                DealCardFromDeck(a_player);
+                Deal(a_player, true);
                 return true;
             }
             return false;
@@ -51,20 +51,21 @@ namespace BlackJack.model
                 ShowHand();
                 while (m_hitRule.DoHit(this))
                 {
-                    DealCardFromDeck(this);
+                    Deal(this, true);
                 }
                 return true;
             }
             return false;
         }
 
-        public void DealCardFromDeck(Player a_player)
+        public void Deal(Player player, bool showCard)
         {
             Card c = m_deck.GetCard();
-            c.Show(true);
-            a_player.DealCard(c);
+            c.Show(showCard);
+            player.DealCard(c);
+            
         }
-
+        
         public bool IsDealerWinner(Player a_player)
         {
             return m_winRule.WhoWin(a_player.CalcScore(), CalcScore(), g_maxScore);
